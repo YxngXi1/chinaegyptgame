@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import { AOSInitializer } from '@/components/AOSInitializer';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import "./globals.css";
 
 
@@ -15,6 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <AOSInitializer/>
         {children}
       </body>
     </html>

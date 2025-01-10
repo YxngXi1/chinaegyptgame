@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+@keyframes backgroundSwitch {
+  0% { background-image: url('/home/china1.jpg'); }
+  25% { background-image: url('/home/egypt1.png'); }
+  50% { background-image: url('/home/china2.jpg'); }
+  75% { background-image: url('/home/egypt2.jpg'); }
+  100% { background-image: url('/home/china1.jpg'); }
+}
+
+.switching-background {
+  animation: backgroundSwitch 15s infinite;
+  background-size: cover;
+  background-position: center;
+}
