@@ -68,12 +68,12 @@ const QuizGame = () => {
                   </button>
                 </div>
                 <div className='flex items-center justify-center row-start-1 col-start-2'>
-                  <button className='text-[#F7FFAA] hover:text-white w-[201px] h-[68px] rounded-full border-white border-4 bg-opacity-0 hover:bg-[#F7FFAA] hover:border-[#F7FFAA] transition ease-in-out duration-300' onClick={() => handleAnswer(currentQuestion.options[2], 2)}>
+                  <button className='text-[#F7FFAA] hover:text-white w-[201px] h-[68px] rounded-full border-white border-4 bg-opacity-0 hover:bg-[#F7FFAA] hover:border-[#F7FFAA] transition ease-in-out duration-300' onClick={() => handleAnswer(currentQuestion.options[1], 1)}>
                     <p className='text-[35px] font-thin'>{currentQuestion.options[1]}</p>
                   </button>
                 </div>
                 <div className='flex items-center justify-center row-start-2 col-start-3'>
-                  <button className='text-[#F7FFAA] hover:text-white w-[201px] h-[68px] rounded-full border-white border-4 bg-opacity-0 hover:bg-[#F7FFAA] hover:border-[#F7FFAA] transition ease-in-out duration-300' onClick={() => handleAnswer(currentQuestion.options[1], 1)}>
+                  <button className='text-[#F7FFAA] hover:text-white w-[201px] h-[68px] rounded-full border-white border-4 bg-opacity-0 hover:bg-[#F7FFAA] hover:border-[#F7FFAA] transition ease-in-out duration-300' onClick={() => handleAnswer(currentQuestion.options[2], 2)}>
                     <p className='text-[35px] font-thin'>{currentQuestion.options[2]}</p>
                   </button>
                 </div>
