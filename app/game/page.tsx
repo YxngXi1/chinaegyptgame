@@ -19,20 +19,20 @@ const QuizGame = () => {
   }, []);
 
   const handleAnswer = (selectedOption: string, optionIndex: number) => {
-    if (optionIndex === 0) {
-      setLeftImageSize('w-full h-full'); // Expand to full size
-      setRightImageSize('w-[697.5px] h-[850px]'); // Keep the right image size
-    } else if (optionIndex === 2) {
-      setLeftImageSize('w-[697.5px] h-[850px]'); // Keep the left image size
-      setRightImageSize('w-full h-full'); // Expand to full size
-    } else if (optionIndex === 1) {
-      setLeftImageSize('w-full h-full');
-      setRightImageSize('w-full h-full');
-    }
     if (selectedOption === shuffledQuestions[currentQuestionIndex].answer) {
       setScore(score + 1);
       setFlashColor('bg-green-500'); // Set flash color to green
-      
+      new Audio('/ding.mp3').play(); // Play correct answer sound
+      if (optionIndex === 0) {
+        setLeftImageSize('w-full h-full'); // Expand to full size
+        setRightImageSize('w-[697.5px] h-[850px]'); // Keep the right image size
+      } else if (optionIndex === 2) {
+        setLeftImageSize('w-[697.5px] h-[850px]'); // Keep the left image size
+        setRightImageSize('w-full h-full'); // Expand to full size
+      } else if (optionIndex === 1) {
+        setLeftImageSize('w-full h-full');
+        setRightImageSize('w-full h-full');
+      }
     } else {
       setFlashColor('bg-red-500'); // Set flash color to red
     }
