@@ -1,21 +1,19 @@
-// utils/questions.js
 const questions = [
     {
-      question: "Which civilization built the Great Wall?",
-      options: ["Egypt", "China", "Both"],
-      answer: "China",
+      question: "which civilization built the great wall?",
+      options: ["egypt", "china", "both"],
+      answer: "china",
     },
     {
-      question: "Which civilization had the Pharaohs?",
-      options: ["Egypt", "China", "Both"],
-      answer: "Egypt",
+      question: "which civilization had the pharaohs?",
+      options: ["egypt", "china", "both"],
+      answer: "egypt",
     },
     {
-      question: "Which civilizations had ancient pyramids?",
-      options: ["Egypt", "China", "Both"],
-      answer: "Both",
+      question: "treatment of poor people was good",
+      options: ["egypt", "china", "both"],
+      answer: "both",
     },
   ];
   
   export default questions;
-  
