@@ -1,11 +1,11 @@
 const questions = [
     {
-      question: "which civilization built the great wall?",
+      question: "pick china",
       options: ["egypt", "both", "china"],
       answer: "china",
     },
     {
-      question: "which civilization had the pharaohs?",
+      question: "pick egypt",
       options: ["egypt", "both", "china"],
       answer: "egypt",
     },
