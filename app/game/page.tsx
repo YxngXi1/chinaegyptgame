@@ -11,6 +11,7 @@ const QuizGame = () => {
   const [showResult, setShowResult] = useState(false);
   const [leftImageSize, setLeftImageSize] = useState('w-[697.5px] h-[850px]'); // Initial size
   const [rightImageSize, setRightImageSize] = useState('w-[697.5px] h-[850px]'); // Initial size
+  const [flashColor, setFlashColor] = useState<string | null>(null); // Flash color state
 
   useEffect(() => {
     const shuffled = [...questions].sort(() => Math.random() - 0.5);
@@ -18,19 +19,26 @@ const QuizGame = () => {
   }, []);
 
   const handleAnswer = (selectedOption: string, optionIndex: number) => {
-    if (selectedOption === shuffledQuestions[currentQuestionIndex].answer) {
-      setScore(score + 1);
-    }
     if (optionIndex === 0) {
       setLeftImageSize('w-full h-full'); // Expand to full size
       setRightImageSize('w-[697.5px] h-[850px]'); // Keep the right image size
-    } else if (optionIndex === 1) {
+    } else if (optionIndex === 2) {
       setLeftImageSize('w-[697.5px] h-[850px]'); // Keep the left image size
       setRightImageSize('w-full h-full'); // Expand to full size
-    } else if (optionIndex === 2) {
+    } else if (optionIndex === 1) {
       setLeftImageSize('w-full h-full');
       setRightImageSize('w-full h-full');
     }
+    if (selectedOption === shuffledQuestions[currentQuestionIndex].answer) {
+      setScore(score + 1);
+      setFlashColor('bg-green-500'); // Set flash color to green
+      
+    } else {
+      setFlashColor('bg-red-500'); // Set flash color to red
+    }
+
+    setTimeout(() => setFlashColor(null), 500); // Remove flash color after 500ms
+
     const nextQuestionIndex = currentQuestionIndex + 1;
     if (nextQuestionIndex < shuffledQuestions.length) {
       setCurrentQuestionIndex(nextQuestionIndex);
@@ -50,13 +58,14 @@ const QuizGame = () => {
   return (
     <>
       <main className='bg-black h-screen text-white flex items-center justify-center relative'>
-        <h2 className='absolute mt-4 ml-4 text-[24px] font-thin z-50 top-0 left-0'>Score: {score}</h2>
+        {flashColor && <div className={`absolute inset-0 ${flashColor} opacity-50 z-50 transition-opacity duration-1000 ease-in-out`}></div>}
+        <h2 className='absolute mt-4 ml-4 text-[24px] font-thin z-20 top-0 left-0'>Score: {score}</h2>
         <div className='absolute top-0 left-0 h-full w-1/2 flex items-center justify-center'>
           <div className={`${leftImageSize} transition-all duration-500 relative`}>
             <div className='absolute inset-0 bg-black opacity-50'></div>
             <Image src='/game/egypt.webp' alt='Left Image' layout='fill' objectFit='cover' className=''/>
           </div>
-        </div>  
+        </div>
         <div className='text-center relative z-10 h-full flex flex-col justify-between bg-black bg-opacity-50 w-full'>
           {!showResult ? (
             <div className='h-full flex flex-col justify-between items-center w-full my-32'>
