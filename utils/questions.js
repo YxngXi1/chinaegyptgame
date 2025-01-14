@@ -90,9 +90,14 @@ const questions = [
       answer: "china",
     },
     {
-      question: "seismograph",
+      question: "made the seismograph",
       options: ["egypt", "both", "china"],
       answer: "china",
+    },
+    {
+      question: "which had text similar to abir's handwriting",
+      options: ["egypt", "both", "china"],
+      answer: "egypt",
     },
   ];
   
