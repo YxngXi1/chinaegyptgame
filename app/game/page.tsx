@@ -69,7 +69,7 @@ const QuizGame = () => {
     <>
       <main className='bg-black h-screen text-white flex items-center justify-center relative'>
         {flashColor && <div className={`absolute inset-0 ${flashColor} opacity-50 z-50 transition-opacity duration-1000 ease-in-out`}></div>}
-        <h2 className='absolute mt-4 ml-4 text-[24px] font-thin z-20 top-0 left-0'>Score: {score}</h2>
+        <h2 className='absolute mt-6 ml-6 text-[24px] font-thin z-20 top-0 left-0'>Score: {score}</h2>
         <div className='absolute top-0 left-0 h-full w-1/2 flex items-center justify-center'>
           <div className={`${leftImageSize} transition-all duration-500 relative`}>
             <div className='absolute inset-0 bg-black opacity-50'></div>
