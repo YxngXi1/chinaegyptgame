@@ -35,17 +35,22 @@ const QuizGame = () => {
       }
     } else {
       setFlashColor('bg-red-500'); // Set flash color to red
+      setShowResult(true); // End the game
+      setLeftImageSize('w-full h-full'); // Expand both images to full size at the end
+      setRightImageSize('w-full h-full');
     }
 
     setTimeout(() => setFlashColor(null), 500); // Remove flash color after 500ms
 
-    const nextQuestionIndex = currentQuestionIndex + 1;
-    if (nextQuestionIndex < shuffledQuestions.length) {
-      setCurrentQuestionIndex(nextQuestionIndex);
-    } else {
-      setShowResult(true);
-      setLeftImageSize('w-full h-full'); // Expand both images to full size at the end
-      setRightImageSize('w-full h-full');
+    if (!showResult) {
+      const nextQuestionIndex = currentQuestionIndex + 1;
+      if (nextQuestionIndex < shuffledQuestions.length) {
+        setCurrentQuestionIndex(nextQuestionIndex);
+      } else {
+        setShowResult(true);
+        setLeftImageSize('w-full h-full'); // Expand both images to full size at the end
+        setRightImageSize('w-full h-full');
+      }
     }
   };
 
@@ -90,7 +95,7 @@ const QuizGame = () => {
             </div>
           ) : (
             <div>
-              <h2>Your Final Score: {score}/{shuffledQuestions.length}</h2>
+              <h2>Your Final Score: {score}</h2>
             </div>
           )}
         </div>
