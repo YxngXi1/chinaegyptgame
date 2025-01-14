@@ -7,7 +7,7 @@ const questions = [
     {
       question: "centralized government",
       options: ["egypt", "both", "china"],
-      answer: "egypt",
+      answer: "both",
     },
     {
       question: "treatment of farmers was good",
@@ -60,7 +60,7 @@ const questions = [
       answer: "china",
     },
     {
-      question: "influenced neighbours throug trade, warfare and cultural exchange",
+      question: "influenced neighbours through trade, warfare and cultural exchange",
       options: ["egypt", "both", "china"],
       answer: "both",
     },
