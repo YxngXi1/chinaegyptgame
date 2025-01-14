@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import questions from '@/utils/questions';
+import Link from 'next/link';
 
 const QuizGame = () => {
   const [shuffledQuestions, setShuffledQuestions] = useState<{ question: string; options: string[]; answer: string }[]>([]);
@@ -12,6 +13,10 @@ const QuizGame = () => {
   const [leftImageSize, setLeftImageSize] = useState('w-[697.5px] h-[850px]'); // Initial size
   const [rightImageSize, setRightImageSize] = useState('w-[697.5px] h-[850px]'); // Initial size
   const [flashColor, setFlashColor] = useState<string | null>(null); // Flash color state
+
+  function refreshPage(){ 
+    window.location.reload(); 
+  }
 
   useEffect(() => {
     const shuffled = [...questions].sort(() => Math.random() - 0.5);
@@ -96,6 +101,9 @@ const QuizGame = () => {
           ) : (
             <div>
               <h2>Your Final Score: {score}</h2>
+              <Link onClick={ refreshPage } href='/game'>
+                <button>refresh</button>
+              </Link>
             </div>
           )}
         </div>
