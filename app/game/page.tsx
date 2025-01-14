@@ -19,7 +19,8 @@ const QuizGame = () => {
   }
 
   useEffect(() => {
-    const shuffled = [...questions].sort(() => Math.random() - 0.5);
+    const filteredQuestions = questions.filter(q => q.question.trim() !== "");
+    const shuffled = [...filteredQuestions].sort(() => Math.random() - 0.5);
     setShuffledQuestions(shuffled);
   }, []);
 

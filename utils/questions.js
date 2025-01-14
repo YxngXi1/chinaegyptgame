@@ -99,6 +99,141 @@ const questions = [
       options: ["egypt", "both", "china"],
       answer: "egypt",
     },
+    {
+      question: "accepted lgbtq+ people",
+      options: ["egypt", "both", "china"],
+      answer: "both",
+    },
+    {
+      question: "had a queer emperor",
+      options: ["egypt", "both", "china"],
+      answer: "china",
+    },
+    {
+      question: "one of the longest lasting civilizations ever",
+      options: ["egypt", "both", "china"],
+      answer: "china",
+    },
+    {
+      question: "silk worms were discovered here",
+      options: ["egypt", "both", "china"],
+      answer: "china",
+    },
+    {
+      question: "had a peasent emperor",
+      options: ["egypt", "both", "china"],
+      answer: "china",
+    },
+    {
+      question: "had a lower class pharoah",
+      options: ["egypt", "both", "china"],
+      answer: "egypt",
+    },
+    {
+      question: "",
+      options: ["egypt", "both", "china"],
+      answer: "",
+    },
+    {
+      question: "",
+      options: ["egypt", "both", "china"],
+      answer: "",
+    },
+    {
+      question: "",
+      options: ["egypt", "both", "china"],
+      answer: "",
+    },
+    {
+      question: "",
+      options: ["egypt", "both", "china"],
+      answer: "",
+    },
+    {
+      question: "",
+      options: ["egypt", "both", "china"],
+      answer: "",
+    },
+    {
+      question: "",
+      options: ["egypt", "both", "china"],
+      answer: "",
+    },
+    {
+      question: "",
+      options: ["egypt", "both", "china"],
+      answer: "",
+    },
+    {
+      question: "",
+      options: ["egypt", "both", "china"],
+      answer: "",
+    },
+    {
+      question: "",
+      options: ["egypt", "both", "china"],
+      answer: "",
+    },
+    {
+      question: "",
+      options: ["egypt", "both", "china"],
+      answer: "",
+    },
+    {
+      question: "",
+      options: ["egypt", "both", "china"],
+      answer: "",
+    },
+    {
+      question: "",
+      options: ["egypt", "both", "china"],
+      answer: "",
+    },
+    {
+      question: "",
+      options: ["egypt", "both", "china"],
+      answer: "",
+    },
+    {
+      question: "",
+      options: ["egypt", "both", "china"],
+      answer: "",
+    },
+    {
+      question: "",
+      options: ["egypt", "both", "china"],
+      answer: "",
+    },
+    {
+      question: "",
+      options: ["egypt", "both", "china"],
+      answer: "",
+    },
+    {
+      question: "",
+      options: ["egypt", "both", "china"],
+      answer: "",
+    },
+    {
+      question: "",
+      options: ["egypt", "both", "china"],
+      answer: "",
+    },
+    {
+      question: "",
+      options: ["egypt", "both", "china"],
+      answer: "",
+    },
+    {
+      question: "",
+      options: ["egypt", "both", "china"],
+      answer: "",
+    },
+    {
+      question: "",
+      options: ["egypt", "both", "china"],
+      answer: "",
+    },
   ];
   
   export default questions;
