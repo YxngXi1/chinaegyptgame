@@ -80,7 +80,7 @@ const QuizGame = () => {
         <div className='text-center relative z-10 h-full flex flex-col justify-between bg-black bg-opacity-50 w-full'>
           {!showResult ? (
             <div className='h-full flex flex-col justify-between items-center w-full my-32'>
-              <h2 className='text-4xl font-bold'>{currentQuestion.question}</h2>
+              <h2 className='text-4xl font-bold border flex justify-center items-center text-center w-[1000px]'>{currentQuestion.question}</h2>
               <div className='grid grid-rows-2 grid-cols-3 gap-4 mb-4 w-2/3'>
                 <div className='flex items-center justify-center row-start-2 col-start-1'>
                   <button className='text-[#F7FFAA] hover:text-white w-[201px] h-[68px] rounded-full border-white border-4 bg-opacity-0 hover:bg-[#F7FFAA] hover:border-[#F7FFAA] transition ease-in-out duration-300' onClick={() => handleAnswer(currentQuestion.options[0], 0)}>

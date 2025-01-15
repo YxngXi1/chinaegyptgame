@@ -140,7 +140,7 @@ const questions = [
       answer: "china",
     },
     {
-      question: "had an ideal form look",
+      question: "had an ideal form of what someone should look like",
       options: ["egypt", "both", "china"],
       answer: "egypt",
     },
