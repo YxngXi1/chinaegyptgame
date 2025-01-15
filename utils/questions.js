@@ -45,11 +45,6 @@ const questions = [
       answer: "egypt",
     },
     {
-      question: "established silk road",
-      options: ["egypt", "both", "china"],
-      answer: "china",
-    },
-    {
       question: "paper was invented here",
       options: ["egypt", "both", "china"],
       answer: "china",
