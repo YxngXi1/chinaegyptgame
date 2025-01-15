@@ -32,7 +32,7 @@ const questions = [
     {
       question: "had predictable flooding",
       options: ["egypt", "both", "china"],
-      answer: "egypt",
+      answer: "both",
     },
     {
       question: "built expensive and huge tombs for the deceased leader",
