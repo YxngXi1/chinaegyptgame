@@ -100,11 +100,11 @@ const QuizGame = () => {
               </div>
             </div>
           ) : (
-            <div>
-              <h2>Your Final Score: {score}</h2>
-              <Link onClick={ refreshPage } href='/game'>
-                <button>refresh</button>
-              </Link>
+            <div className='border h-full flex flex-col justify-center items-center gap-y-12'>
+              <h2 className='text-4xl font-semibold' data-aos="fade-up" data-aos-delay="200" data-aos-duration="1200">Your Final Score: {score}</h2>
+                <button onClick={ refreshPage } className="rounded-full hover:bg-[#4d9446] bg-[#59AC51] w-[200px] h-[60px] transition ease-in-out duration-100" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1400">
+                  <p className="text-white text-[20px]">play again</p>
+                </button>
             </div>
           )}
         </div>
