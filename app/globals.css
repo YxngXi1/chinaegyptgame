@@ -20,4 +20,6 @@ body {
   animation: backgroundSwitch 15s infinite;
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
+  background-color: black; /* Fallback color to prevent white flash */
 }
